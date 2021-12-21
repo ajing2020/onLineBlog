@@ -1,7 +1,7 @@
 export default {
-  data() {
+  data () {
     return {
-      msg: '你好',
-    };
-  },
+      msg: 'Welcome to Your Vue.js App'
+    }
+  }
 }
