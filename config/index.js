@@ -6,17 +6,6 @@ const path = require("path");
 
 module.exports = {
   dev: {
-    proxyTable: {
-      "/auth": {
-        target: "https://blog-server.hunger-valley.com",
-        secure: true,
-        changeOrigin: true,
-        pathRewrite: {
-          "^/auth": "/auth"
-        }
-      }
-    },
-
     // Paths
     assetsSubDirectory: "static",
     assetsPublicPath: "/",
