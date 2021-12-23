@@ -17,10 +17,17 @@ export default function request(url, type = "GET", data = {}) {
     } else {
       option.data = data;
     }
+    if (localStorage.token) {
+      axios.defaults.headers.common["Authorization"] = localStorage.token;
+    }
+
     axios(option)
       .then(res => {
         console.log(res.data);
         if (res.data.status === "ok") {
+          if (res.data.token) {
+            localStorage.token = res.data.token;
+          }
           resolve(res.data);
         } else {
           Message.error(res.data.msg);
