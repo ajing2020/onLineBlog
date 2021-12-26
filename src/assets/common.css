@@ -8,6 +8,10 @@ body,
 #app {
   height: 100%;
 }
+a {
+  text-decoration: none;
+  color: #333;
+}
 .el-button {
   color: #009900;
   border: 1px solid rgba(0, 153, 51, 0.6);
@@ -23,6 +27,16 @@ body,
 .el-button:hover {
   color: #fff;
   background-color: rgba(0, 153, 51, 0.6);
+}
+input {
+  line-height: 40px;
+  border: 1px solid #eaeaea;
+  padding: 0 10px;
+  border-radius: 4px;
+  outline: none;
+}
+input:focus {
+  border-color: rgba(0, 153, 51, 0.6);
 }
 .el-input.is-active .el-input__inner,
 .el-input__inner:focus,
